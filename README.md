@@ -1,5 +1,4 @@
-# Purple-Team-lab
-# Purple Team Homelab — Attack & Detection
+# Purple Team lab — Attack & Detection
 
 A hands-on purple team project where I built a controlled lab environment, executed real attacks across multiple vectors, then switched to the defensive side and detected every stage using Splunk, Suricata, and Sysmon. The goal was to develop both offensive and defensive skills simultaneously and document the full picture the way a SOC analyst or pentester would in a real engagement.
 
