@@ -4,6 +4,12 @@ A hands-on purple team project where I built a controlled lab environment, execu
 
 ---
 
+## Lab Topology
+
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/0af13824-3130-4902-b940-74b4f5104e12" />
+
+---
+
 ## Lab Environment
 
 | Machine | IP | OS | Role |
@@ -90,8 +96,3 @@ Working both sides of the same attack repeatedly made a few things clear that ar
 
 🎥 [Watch the complete video demonstration](#) *(add link)*
 
----
-
-## Lab Topology
-
-![Lab Topology](assets/lab-topology.png)
