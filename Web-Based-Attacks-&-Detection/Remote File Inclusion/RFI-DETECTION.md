@@ -36,7 +36,7 @@ index=suricata event_type="alert"
 
 What stands out here is the progression — Suricata caught the RFI pattern in the request, then independently detected command execution parameters being passed to the webshell. That's two separate stages of the attack flagged at the network layer alone.
 
-> 📸 <img width="1905" height="702" alt="Image" src="https://github.com/user-attachments/assets/b7c654c5-03c2-41cb-8826-9233ace9e80e" />
+> <img width="1905" height="702" alt="Image" src="https://github.com/user-attachments/assets/b7c654c5-03c2-41cb-8826-9233ace9e80e" />
 
 ---
 
@@ -62,7 +62,7 @@ index=Web_log src_ip="192.168.56.102"
 
 The six POST requests to `RFI_bash.php` are the webshell commands being executed. The 404 on `RFI_bash.ph` shows the attacker made a typo on the first access attempt — a detail that's useful in a real investigation for confirming manual interaction rather than fully automated tooling.
 
-> 📸 <img width="1919" height="823" alt="Image" src="https://github.com/user-attachments/assets/5abae922-c333-45d2-868e-68417871a0ca" />
+> <img width="1919" height="823" alt="Image" src="https://github.com/user-attachments/assets/5abae922-c333-45d2-868e-68417871a0ca" />
 
 ---
 
@@ -122,7 +122,7 @@ index=Web_log src_ip="192.168.56.102"
 
 The referer headers confirm the natural navigation flow — each page linked from the previous one, showing deliberate manual movement through the application rather than random fuzzing.
 
-> 📸 `screenshots/detection4-full-timeline.png`
+> <img width="1900" height="953" alt="Image" src="https://github.com/user-attachments/assets/782f0a41-f0f2-4296-ae2d-f43ea3f2f256" />
 
 ---
 
@@ -148,7 +148,7 @@ index=Web_log uri_path="*/hackable/uploads/*"
 
 In a production environment, any GET or POST request directly to a file in an uploads directory should be treated as suspicious. Upload directories should store files, not execute them — this single alert rule would catch the attack at the moment of webshell access.
 
-> 📸 `screenshots/detection5-uploads-directory.png`
+> <img width="1899" height="736" alt="Image" src="https://github.com/user-attachments/assets/19bc79dd-f3f9-4abc-bc00-92cd81292fa0" />
 
 ---
 
@@ -173,7 +173,7 @@ index=sysmon EventCode=1 ParentImage="*cmd*"
 
 The timestamps here align exactly with the POST requests in the web log — `whoami` at 13:40:37 matches the 36-byte web log response, `systeminfo` at 13:40:54 matches the 3,314-byte response. This cross-source correlation between web logs and Sysmon is exactly how a SOC analyst would confirm that web requests resulted in actual OS command execution on the host.
 
-> 📸 `screenshots/detection6-sysmon-commands.png`
+> <img width="1901" height="638" alt="Image" src="https://github.com/user-attachments/assets/655be18e-2445-444f-acda-66b006a08118" />
 
 ---
 
