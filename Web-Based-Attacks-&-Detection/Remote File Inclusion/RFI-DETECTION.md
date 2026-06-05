@@ -36,7 +36,7 @@ index=suricata event_type="alert"
 
 What stands out here is the progression — Suricata caught the RFI pattern in the request, then independently detected command execution parameters being passed to the webshell. That's two separate stages of the attack flagged at the network layer alone.
 
-> 📸 `screenshots/detection1-suricata-signatures.png`
+> 📸 <img width="1905" height="702" alt="Image" src="https://github.com/user-attachments/assets/b7c654c5-03c2-41cb-8826-9233ace9e80e" />
 
 ---
 
