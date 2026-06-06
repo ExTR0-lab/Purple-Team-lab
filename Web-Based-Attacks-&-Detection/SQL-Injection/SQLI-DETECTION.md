@@ -36,7 +36,7 @@ index=Web_log uri_path="*/sqli/*"
 
 The URL encoding (`%27` = `'`, `%20` = space) is standard sqlmap behaviour — when decoded these are clear UNION SELECT injection attempts against the database schema.
 
-> 📸 `screenshots/detection1-sqli-uri-path.png`
+> <img width="1919" height="806" alt="Image" src="https://github.com/user-attachments/assets/fe7716b1-95ec-4096-8e81-be49a966ec02" />
 
 ---
 
@@ -52,7 +52,7 @@ index=Web_log uri_path="*/sqli/*"
 
 **Result:** `192.168.56.102` made **10 requests** to the SQLi path. That might seem low, but sqlmap is efficient — it only sends what it needs to per step. Combined with the payload content in Detection 1, the volume and the content together confirm automated tooling.
 
-> 📸 `screenshots/detection2-request-count.png`
+> <img width="1920" height="714" alt="Image" src="https://github.com/user-attachments/assets/7fa7d242-778c-42a2-a22c-031b19d005a1" />
 
 ---
 
@@ -70,7 +70,7 @@ index=Web_log user_agent="*sqlmap*"
 
 This is the simplest and most direct detection. In a real environment blocking or alerting on the sqlmap user agent string is a quick win.
 
-> 📸 `screenshots/detection3-sqlmap-useragent.png`
+> <img width="1920" height="872" alt="Image" src="https://github.com/user-attachments/assets/c65e3f27-eca4-4a24-9875-1be7214d71aa" />
 
 ---
 
@@ -87,7 +87,7 @@ index=Web_log
 
 **Result:** All hits came from `192.168.56.102`. The `uri_query` values were the same long URL-encoded UNION SELECT strings seen in previous queries — confirming that keyword-based detection independently catches the same attack without relying on user agent or path matching.
 
-> 📸 `screenshots/detection4-sql-keywords.png`
+> <img width="1915" height="512" alt="Image" src="https://github.com/user-attachments/assets/a87dac7e-c16d-409f-a5f1-39e8608eb17f" />
 
 ---
 
@@ -103,7 +103,7 @@ index=suricata alert.signature="sqlmap UA"
 
 **Result:** `192.168.56.102 → 192.168.56.105` with signature **"sqlmap UA"** — the same attack confirmed at the network level. The `http.uri` field showed the same injection payloads, and the count reflects how many times Suricata fired the rule across the full attack.
 
-> 📸 `screenshots/detection5-suricata-sqlmap.png`
+> <img width="1700" height="500" alt="Image" src="https://github.com/user-attachments/assets/ee9b0a9d-55a8-40f6-95a7-5d26ec0c0ca6" />
 
 ---
 
@@ -121,7 +121,7 @@ index=Web_log src_ip="192.168.56.102"
 
 This is the query an analyst would run after the others to document the full incident timeline.
 
-> 📸 `screenshots/detection6-full-timeline.png`
+> <img width="1910" height="777" alt="Image" src="https://github.com/user-attachments/assets/c2b4efde-c82d-4e5b-ac0e-64021bd8dd11" />
 
 ---
 
