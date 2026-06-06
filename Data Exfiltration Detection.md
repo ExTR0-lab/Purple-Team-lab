@@ -10,7 +10,7 @@ The dataset used for this analysis was stored in the data_exfil index, and DNS e
 
 The first step in the investigation was to identify which internal hosts were generating DNS queries. Understanding which systems are actively making DNS requests helps analysts determine where suspicious activity might be originating from.
 
-![1](https://github.com/user-attachments/assets/54542a03-487e-445f-8ce3-3d750014d7f3)
+> ![1](https://github.com/user-attachments/assets/54542a03-487e-445f-8ce3-3d750014d7f3)
 
 Analysis
 
@@ -26,7 +26,7 @@ Hosts generating an unusually high number of DNS requests may indicate abnormal 
 
 After identifying the active hosts, the next step was to analyze which domains were being queried. Attackers performing DNS tunneling often communicate with domains they control in order to receive or transmit encoded data.
 
-![Image](https://github.com/user-attachments/assets/8e407d1b-764b-494b-9a47-0d10f4e3f408)
+> ![Image](https://github.com/user-attachments/assets/8e407d1b-764b-494b-9a47-0d10f4e3f408)
 
 Analysis
 
@@ -44,7 +44,7 @@ One of the common indicators of DNS tunneling is unusually long DNS queries. Att
 
 To identify this behavior, I searched for DNS queries longer than 30 characters.
 
-![Image](https://github.com/user-attachments/assets/ac01cd1c-c8c3-4721-a077-405c4e21f2a2)
+> ![Image](https://github.com/user-attachments/assets/ac01cd1c-c8c3-4721-a077-405c4e21f2a2)
 
 Analysis
 
@@ -66,7 +66,7 @@ These domains contain long, random-looking strings that resemble encoded data. T
 
 After identifying the suspicious queries, the next step was to determine how many such events were present in the dataset.
 
-![Image](https://github.com/user-attachments/assets/7e2b5ccb-43d8-4b7c-b52a-f1cbb7154375)
+> ![Image](https://github.com/user-attachments/assets/7e2b5ccb-43d8-4b7c-b52a-f1cbb7154375)
 
 The query returned: 315 events
 
