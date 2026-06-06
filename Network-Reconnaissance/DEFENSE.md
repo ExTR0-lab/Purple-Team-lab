@@ -27,7 +27,7 @@ index=suricata
 
 **Result:** `192.168.56.102` hit `192.168.56.105` across **33,517 unique ports** with **34,541 total events** — a clear full-port sweep.
 
-> 📸 `screenshots/detection1-port-volume.png`
+> <img width="1306" height="553" alt="Image" src="https://github.com/user-attachments/assets/1631f665-7a57-461b-ae1b-bf19d288de88" />
 
 ---
 
@@ -42,7 +42,7 @@ index=suricata event_type=alert alert.signature="*Nmap*"
 
 **Result:** Multiple rows showing `192.168.56.102 → 192.168.56.105` with the signature **"Nmap SYN Scan Detected — T1046"** firing across different destination ports, confirming the tool used by the attacker.
 
-> 📸 `screenshots/detection2-nmap-signature.png`
+><img width="1287" height="808" alt="Image" src="https://github.com/user-attachments/assets/5cd60f78-813d-49c8-acbe-f3c3c3662742" />
 
 ---
 
@@ -59,7 +59,7 @@ index=suricata
 
 **Result:** The same source-destination pair produced **200+ events within a single minute**, consistent with `-T4` aggressive timing behavior.
 
-> 📸 `screenshots/detection3-burst-rate.png`
+> <img width="1299" height="527" alt="Image" src="https://github.com/user-attachments/assets/af384127-1327-4f36-a10d-0b8309174495" />
 
 ---
 
@@ -82,11 +82,3 @@ Having all three line up is what makes this a high-confidence detection rather t
 🎥 [Watch](#) *(add link)*
 
 ---
-
-## Screenshots
-
-| File | What it shows |
-|------|--------------|
-| `screenshots/detection1-port-volume.png` | 33,517 scanned ports, 34,541 count |
-| `screenshots/detection2-nmap-signature.png` | Suricata Nmap signature alerts |
-| `screenshots/detection3-burst-rate.png` | Time-binned burst detection |
