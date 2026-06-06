@@ -41,7 +41,7 @@ The scan returned **33,517 open ports** across **34,541 total packets**, confirm
 
 ## 📹 Video Demonstration
 
-🎥 [Watch](#) *(add link)*
+🎥 [Watch](#) *([add link](https://youtu.be/TVthhLdR4Vo?si=8pt824FXH0R6lG_8))*
 
 ---
 
