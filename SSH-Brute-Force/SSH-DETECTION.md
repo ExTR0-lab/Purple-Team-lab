@@ -78,6 +78,6 @@ The detection chain here tells the full story — the first two queries catch th
 
 ## 📹 Video Demonstration
 
-🎥 [Watch](#) *(add link)*
+🎥 *[Watch](https://www.youtube.com/watch?v=MoEo8Rg9VN8&list=PLyvuyjd57e75N5De-CX6oE3L3YIkR80Qe&index=5&t=52s)*
 
 ---
