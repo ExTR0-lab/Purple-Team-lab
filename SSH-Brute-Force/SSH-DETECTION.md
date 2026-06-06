@@ -27,7 +27,7 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCo
 
 **Result:** `192.168.56.102 → 192.168.56.105` with **2,014 connections** on port 22 — a clear brute force pattern from a single source recorded directly on the Windows host.
 
-> 📸 `screenshots/detection1-sysmon-ssh-connections.png`
+> <img width="1902" height="590" alt="Image" src="https://github.com/user-attachments/assets/1e9ba123-74d6-425b-8a77-060783abcec8" />
 
 ---
 
@@ -43,7 +43,7 @@ index=suricata event_type=alert alert.signature="*SSH*"
 
 **Result:** `192.168.56.102 → 192.168.56.105` with the signature **"SSH Bruteforce — T1110"** firing **830 times**. The difference between 2,014 Sysmon events and 830 Suricata alerts is expected — Suricata aggregates before alerting while Sysmon logs every individual connection event.
 
-> 📸 `screenshots/detection2-suricata-ssh-signature.png`
+> <img width="1910" height="611" alt="Image" src="https://github.com/user-attachments/assets/829dcbaf-09ce-4d38-b5aa-bf5642273c85" />
 
 ---
 
