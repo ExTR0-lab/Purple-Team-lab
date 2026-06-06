@@ -4,9 +4,9 @@ In this project, I used Splunk Enterprise to analyze DNS logs and identify poten
 
 The dataset used for this analysis was stored in the data_exfil index, and DNS events were filtered using the dns_logs sourcetype.
 
-Video Demonstration:
+---
 
-# Step 1: Identifying Source IPs Generating DNS Traffic
+# Identifying Source IPs Generating DNS Traffic
 
 The first step in the investigation was to identify which internal hosts were generating DNS queries. Understanding which systems are actively making DNS requests helps analysts determine where suspicious activity might be originating from.
 
@@ -20,7 +20,9 @@ The results showed several internal IP addresses generating DNS traffic, includi
 
 Hosts generating an unusually high number of DNS requests may indicate abnormal behavior and should be examined more closely during an investigation.
 
-# Step 2: Identifying Domains Being Queried
+---
+
+# Identifying Domains Being Queried
 
 After identifying the active hosts, the next step was to analyze which domains were being queried. Attackers performing DNS tunneling often communicate with domains they control in order to receive or transmit encoded data.
 
@@ -36,7 +38,7 @@ Some of these domains are clearly legitimate, such as Stack Overflow or Mozilla.
 
 Analyzing DNS query destinations helps security analysts identify suspicious or unknown domains that may be involved in malicious activity.
 
-# Step 3: Detecting Suspicious Long DNS Queries
+# Detecting Suspicious Long DNS Queries
 
 One of the common indicators of DNS tunneling is unusually long DNS queries. Attackers often encode data inside subdomains, which makes the query strings much longer than normal DNS requests.
 
@@ -58,7 +60,9 @@ apj51x7azdeikfa5wjt.tunnelcorp.net
 
 These domains contain long, random-looking strings that resemble encoded data. This pattern is commonly associated with DNS tunneling, where attackers split encoded information into multiple DNS requests to exfiltrate data from a compromised system.
 
-# Step 4: Measuring the Scale of Suspicious Activity
+---
+
+# Measuring the Scale of Suspicious Activity
 
 After identifying the suspicious queries, the next step was to determine how many such events were present in the dataset.
 
@@ -78,11 +82,9 @@ The reputation of the destination domain
 
 Whether the activity represents confirmed data exfiltration
 
+---
+
 # Conclusion
-
-This project demonstrates how Splunk Enterprise can be used to detect potential data exfiltration attempts through DNS traffic analysis.
-
-By examining DNS logs and applying simple SPL queries, it is possible to identify suspicious behaviors such as:
 
 High volumes of DNS queries from specific hosts
 
@@ -91,3 +93,5 @@ Communication with unusual domains
 Abnormally long DNS query strings that may contain encoded data
 
 During this investigation, 315 suspicious DNS queries containing encoded subdomains were identified, many associated with the domain tunnelcorp.net. These patterns are consistent with techniques used in DNS tunneling, where attackers hide sensitive information inside DNS requests.
+
+---
