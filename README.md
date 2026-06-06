@@ -94,5 +94,5 @@ Working both sides of the same attack repeatedly made a few things clear that ar
 
 ## 📹 Full Lab Walkthrough
 
-🎥 [Watch the complete video demonstration](#) *(add link)*
+🎥 [Watch the complete video demonstration](#) https://www.youtube.com/playlist?list=PLyvuyjd57e75N5De-CX6oE3L3YIkR80Qe
 
