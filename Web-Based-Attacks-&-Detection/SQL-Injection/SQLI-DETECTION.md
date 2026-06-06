@@ -146,13 +146,3 @@ What stands out here is how many independent signals sqlmap leaves behind. Even 
 
 ---
 
-## Screenshots
-
-| File | What it shows |
-|------|--------------|
-| `screenshots/detection1-sqli-uri-path.png` | Decoded UNION payloads in URI path |
-| `screenshots/detection2-request-count.png` | 10 requests from attacker IP |
-| `screenshots/detection3-sqlmap-useragent.png` | sqlmap/1.10.2 user agent string |
-| `screenshots/detection4-sql-keywords.png` | SQL keywords in uri_query |
-| `screenshots/detection5-suricata-sqlmap.png` | Suricata sqlmap UA rule |
-| `screenshots/detection6-full-timeline.png` | Full chronological attack timeline |
