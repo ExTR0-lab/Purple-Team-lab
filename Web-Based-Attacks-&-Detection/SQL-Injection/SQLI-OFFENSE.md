@@ -132,4 +132,4 @@ Starting from a single injectable parameter in a URL, I was able to enumerate th
 
 ## 📹 Video Demonstration
 
-🎥 [Watch](#) *(add link)*
+🎥 [Watch](https://youtu.be/AUWowZWU_d8?si=Mbqf9T44758Gaf2X)
