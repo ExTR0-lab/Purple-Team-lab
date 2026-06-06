@@ -35,7 +35,7 @@ hydra -L username.txt -P passwords.txt ssh://192.168.56.105 -t 10 -V
 [22][ssh] host: 192.168.56.105   login: Admin   password: P@ssword123!
 ```
 
-> 📸 `screenshots/hydra-cracked.png`
+><img width="869" height="383" alt="Image" src="https://github.com/user-attachments/assets/590bd238-b5bc-4077-a02f-422e34a5d735" /> 📸 `screenshots/hydra-cracked.png`
 
 ---
 
@@ -57,7 +57,7 @@ net user
 
 These three commands are among the first things any attacker runs after gaining access — confirming their identity, understanding the network position, and enumerating local user accounts. They're also well-known detection targets on the blue team side, which made them a good test for the Sysmon detections in the defense phase.
 
-> 📸 `screenshots/ssh-login-and-commands.png`
+> <img width="868" height="481" alt="Image" src="https://github.com/user-attachments/assets/eb0b8b3d-aced-4a98-9386-46dbddec5f72" />
 
 ---
 
