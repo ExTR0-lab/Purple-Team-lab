@@ -38,6 +38,8 @@ Some of these domains are clearly legitimate, such as Stack Overflow or Mozilla.
 
 Analyzing DNS query destinations helps security analysts identify suspicious or unknown domains that may be involved in malicious activity.
 
+---
+
 # Detecting Suspicious Long DNS Queries
 
 One of the common indicators of DNS tunneling is unusually long DNS queries. Attackers often encode data inside subdomains, which makes the query strings much longer than normal DNS requests.
