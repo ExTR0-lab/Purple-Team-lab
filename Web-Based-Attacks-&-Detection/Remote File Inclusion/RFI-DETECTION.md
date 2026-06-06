@@ -194,6 +194,6 @@ The most valuable finding here is the Sysmon-to-web-log correlation — matching
 
 ## 📹 Video Demonstration
 
-🎥 [Watch](#) *(add link)*
+🎥 [Watch](https://www.youtube.com/watch?v=UznrbmJD9FQ&list=PLyvuyjd57e75N5De-CX6oE3L3YIkR80Qe&index=2&t=52s)
 
 ---
