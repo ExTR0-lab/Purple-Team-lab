@@ -26,7 +26,7 @@ The upload was confirmed when the server responded at:
 http://192.168.56.105/dvwa/hackable/uploads/RFI_bash.php
 ```
 
-> 📸 `screenshots/upload-success.png`
+> <img width="903" height="446" alt="Image" src="https://github.com/user-attachments/assets/a0884662-9b9d-44da-ac73-c9a00333c693" />
 
 ---
 
@@ -39,8 +39,6 @@ http://192.168.56.105/dvwa/hackable/uploads/RFI_bash.php
 ```
 
 A `200 OK` response with `10,879 bytes` returned — the webshell interface loaded successfully on the Windows target.
-
-> 📸 `screenshots/webshell-access.png`
 
 ---
 
@@ -57,7 +55,8 @@ net user
 
 These commands confirmed I had code execution on the target OS, revealed the network configuration, dumped detailed system information, and enumerated local user accounts — all from a browser-based shell over HTTP.
 
-> 📸 `screenshots/rce-commands.png`
+> <img width="920" height="387" alt="Image" src="https://github.com/user-attachments/assets/fc41a35b-505e-4eca-95af-d0e3d845709a" />
+  <img width="935" height="825" alt="Image" src="https://github.com/user-attachments/assets/19b59422-a730-4bd9-a46c-853aca4bf77e" />
 
 ---
 
